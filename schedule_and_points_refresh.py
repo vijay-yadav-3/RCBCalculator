@@ -1,13 +1,10 @@
 import http.client
 import json
-import os
-
-# Get the secret key from the environment
-secret_key = os.environ.get('RAPID_API_KEY')
+import sys
 
 conn = http.client.HTTPSConnection("cricbuzz-cricket.p.rapidapi.com")
 headers = {
-    'X-RapidAPI-Key': "secret_key",
+    'X-RapidAPI-Key': sys.argv[1],
     'X-RapidAPI-Host': "cricbuzz-cricket.p.rapidapi.com"
 }
 conn.request("GET", "/series/v1/6732", headers=headers)
