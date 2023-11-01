@@ -28,7 +28,10 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test with pytest
+      env:
+        RAPID_API_KEY: ${{ secrets.RAPID_API_KEY }}
       run: |
+        sed -i 's/RAPID_API_KEY/$RAPID_API_KEY/g' schedule_and_points_refresh.py
         python schedule_and_points_refresh.py
         ls
         cat sch.txt
