@@ -6,8 +6,6 @@ name: Python application
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 permissions:
   contents: read
@@ -32,6 +30,3 @@ jobs:
         RAPID_API_KEY: ${{ secrets.RAPID_API_KEY }}
       run: |
         python schedule_and_points_refresh.py $RAPID_API_KEY
-        ls
-        cat sch.txt
-        cat poin.txt
