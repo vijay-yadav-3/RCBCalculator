@@ -31,7 +31,7 @@ jobs:
       env:
         RAPID_API_KEY: ${{ secrets.RAPID_API_KEY }}
       run: |
-        python schedule_and_points_refresh.py
+        python schedule_and_points_refresh.py $RAPID_API_KEY
         ls
         cat sch.txt
         cat poin.txt
