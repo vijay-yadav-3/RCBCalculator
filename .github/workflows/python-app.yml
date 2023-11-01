@@ -31,3 +31,5 @@ jobs:
       run: |
         python schedule_and_points_refresh.py
         ls
+        cat sch.txt
+        cat poin.txt
