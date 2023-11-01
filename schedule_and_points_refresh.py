@@ -3,7 +3,7 @@ import json
 
 conn = http.client.HTTPSConnection("cricbuzz-cricket.p.rapidapi.com")
 headers = {
-    'X-RapidAPI-Key': "$RAPID_API_KEY",
+    'X-RapidAPI-Key': "RAPID_API_KEY",
     'X-RapidAPI-Host': "cricbuzz-cricket.p.rapidapi.com"
 }
 conn.request("GET", "/series/v1/6732", headers=headers)
