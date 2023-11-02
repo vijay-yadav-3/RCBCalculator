@@ -43,8 +43,8 @@ jobs:
         # prerelease: false
 
     - name: Get Release
-    - id: get_release_info
-    - uses: cardinalby/git-get-release-action@v1
+      id: get_release_info
+      uses: cardinalby/git-get-release-action@v1
       env:
         GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
       with:
